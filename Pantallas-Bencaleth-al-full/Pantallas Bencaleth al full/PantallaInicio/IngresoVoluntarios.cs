@@ -64,11 +64,6 @@ namespace PantallaInicio
             { return false; }
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
             txt_Tel_Voluntarios.Text = Herramientas.SoloNumeros(txt_Tel_Voluntarios);
@@ -89,10 +84,10 @@ namespace PantallaInicio
             {
                 errorProvider3.SetError(txt_Apelli_Voluntarios, "Falta llenar Campo");
             }
-            /*if (string.IsNullOrEmpty(txt_Iden_Voluntarios.Text))
+            if (string.IsNullOrEmpty(txt_Iden_Voluntarios.Text))
             {
                 errorProvider4.SetError(txt_Iden_Voluntarios, "Falta llenar Campo");
-            }*/
+            }
             if (string.IsNullOrEmpty(txt_Tel_Voluntarios.Text))
             {
                 errorProvider5.SetError(txt_Tel_Voluntarios, "Falta llenar Campo");
@@ -104,11 +99,11 @@ namespace PantallaInicio
             if (string.IsNullOrEmpty(txt_Info_Voluntarios.Text))
             {
                 errorProvider7.SetError(txt_Info_Voluntarios, "Falta llenar Campo");
-            }/*
+            }
             if (string.IsNullOrEmpty(txtbMensualidad.Text))
             {
                 errorProvider8.SetError(txtbMensualidad, "Falta llenar Campo");
-            }*/
+            }
             if (string.IsNullOrEmpty(txtHoras.Text))
             {
                 errorProvider9.SetError(txtHoras, "Falta llenar Campo");
@@ -130,6 +125,9 @@ namespace PantallaInicio
         {
              txt_Id_Voluntarios.Text = Herramientas.NingunCaracterEspecial(txt_Id_Voluntarios);
              errorProvider1.Clear();
+
+             txt_Id_Voluntarios.Text = Herramientas.NingunEspacioEnBlanco(txt_Id_Voluntarios);
+             errorProvider1.Clear();
         }
 
         private void txt_Nom_Voluntarios_TextChanged(object sender, EventArgs e)
@@ -144,6 +142,12 @@ namespace PantallaInicio
             errorProvider3.Clear();
         }
 
+        private void txt_Iden_Voluntarios_TextChanged(object sender, EventArgs e)
+        {
+            txt_Iden_Voluntarios.Text = Herramientas.SoloNumeros(txt_Iden_Voluntarios);
+            errorProvider4.Clear();
+        }
+
         private void txt_Email_Voluntarios_TextChanged(object sender, EventArgs e)
         {
             txt_Email_Voluntarios.Text = Herramientas.NingunEspacioEnBlanco(txt_Email_Voluntarios);
@@ -156,10 +160,6 @@ namespace PantallaInicio
             errorProvider7.Clear();
         }
 
-        private void txt_Mens_Voluntarios_TextChanged(object sender, EventArgs e)
-        {
-            //txt_Mens_Voluntarios.Text = Herramientas.SoloNumeros(txt_Mens_Voluntarios);
-        }
 
         private void txtHoras_TextChanged(object sender, EventArgs e)
         {
@@ -167,83 +167,6 @@ namespace PantallaInicio
             errorProvider9.Clear();
         }
 
-        private void txt_Id_Voluntarios_Validated(object sender, EventArgs e)
-        {
-            //if (txt_Id_Voluntarios.Text.Trim() == "")
-            //{
-            //    epERROR.SetError(txt_Id_Voluntarios, "ingrese el ID ");
-            //    txt_Id_Voluntarios.Focus();
-            //}
-            //else
-            //{
-            //    epERROR.Clear();
-            //}
-        }
-
-        private void txt_Nom_Voluntarios_Validated(object sender, EventArgs e)
-        {
-            //if (txt_Nom_Voluntarios.Text.Trim() == "")
-            //{
-            //    epERROR.SetError(txt_Nom_Voluntarios, "ingrese el Nombre ");
-            //    txt_Nom_Voluntarios.Focus();
-            //}
-            //else
-            //{
-            //    epERROR.Clear();
-            //}
-        }
-
-        private void txt_Apelli_Voluntarios_Validated(object sender, EventArgs e)
-        {
-            //if (txt_Apelli_Voluntarios.Text.Trim() == "")
-            //{
-            //    epERROR.SetError(txt_Apelli_Voluntarios, "ingrese el Apellido ");
-            //    txt_Apelli_Voluntarios.Focus();
-            //}
-            //else
-            //{
-            //    epERROR.Clear();
-            //}
-        }
-
-        private void txt_Tel_Voluntarios_Validated(object sender, EventArgs e)
-        {
-            //if (txt_Tel_Voluntarios.Text.Trim() == "")
-            //{
-            //    epERROR.SetError(txt_Tel_Voluntarios, "ingrese el Telefono ");
-            //    txt_Tel_Voluntarios.Focus();
-            //}
-            //else
-            //{
-            //    epERROR.Clear();
-            //}
-        }
-
-        private void txt_Info_Voluntarios_Validated(object sender, EventArgs e)
-        {
-            //if (txt_Info_Voluntarios.Text.Trim() == "")
-            //{
-            //    epERROR.SetError(txt_Info_Voluntarios, "ingrese la Informacion");
-            //    txt_Info_Voluntarios.Focus();
-            //}
-            //else
-            //{
-            //    epERROR.Clear();
-            //}
-        }
-
-        private void txtHoras_Validated(object sender, EventArgs e)
-        {
-            //if (txtHoras.Text.Trim() == "")
-            //{
-            //    epERROR.SetError(txtHoras, "ingrese las Horas ");
-            //    txtHoras.Focus();
-            //}
-            //else
-            //{
-            //    epERROR.Clear();
-            //}
-        }
 
         private void txt_Email_Voluntarios_Leave(object sender, EventArgs e)
         {
@@ -290,6 +213,12 @@ namespace PantallaInicio
             }
         }
 
+        private void txtbMensualidad_TextChanged(object sender, EventArgs e)
+        {
+            Herramientas.SoloNumeros(txtbMensualidad);
+            errorProvider8.Clear();
+        }
+
         private void btnPagar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Esta seguro que desea ingresar pago?", "Pagar", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -298,5 +227,16 @@ namespace PantallaInicio
                 voluntario.PagarMensualidad(txt_Id_Voluntarios);
             }
         }
+
+        private void txt_Iden_Voluntarios_TextChanged_1(object sender, EventArgs e)
+        {
+            txt_Iden_Voluntarios.Text = Herramientas.SoloNumeros(txt_Iden_Voluntarios);
+            errorProvider1.Clear();
+
+            txt_Iden_Voluntarios.Text = Herramientas.NingunEspacioEnBlanco(txt_Iden_Voluntarios);
+            errorProvider1.Clear();
+           
+        }
+
     }
 }

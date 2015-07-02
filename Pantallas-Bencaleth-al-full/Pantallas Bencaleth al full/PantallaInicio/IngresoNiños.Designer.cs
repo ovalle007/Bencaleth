@@ -191,7 +191,7 @@
             // 
             this.txt_idniños.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_idniños.Location = new System.Drawing.Point(230, 216);
-            this.txt_idniños.MaxLength = 15;
+            this.txt_idniños.MaxLength = 30;
             this.txt_idniños.Name = "txt_idniños";
             this.txt_idniños.Size = new System.Drawing.Size(193, 26);
             this.txt_idniños.TabIndex = 0;

@@ -12,6 +12,21 @@ namespace PantallaInicio
     {
         QueriesTableAdapter BDVoluntario = new QueriesTableAdapter();
 
+        private int _Codigo_Voluntarios;
+        public override string Codigo_Persona
+        {
+            get
+            {
+                return _Codigo_Voluntarios.ToString ();
+            }
+            set
+            {
+                if (Herramientas.IsNumeric(value))
+                    _Codigo_Voluntarios = Convert.ToInt32 (value);
+            }
+        }
+
+
         private string _Nombre;
 
         public string nombre
@@ -144,6 +159,32 @@ namespace PantallaInicio
             {
                 if (Herramientas.IsNumeric(value))
                     _Identidad = Convert.ToInt16(value);
+            }
+        }
+
+        private string _Pais;
+        public string Pais
+        {
+            get
+            {
+                return _Pais;
+            }
+            set
+            {
+                    _Pais = value;
+            }
+        }
+
+        private string _Pasaporte;
+        public string Pasaporte
+        {
+            get
+            {
+                return _Pasaporte;
+            }
+            set
+            {
+                    _Pasaporte = value;
             }
         }
 
