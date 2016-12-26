@@ -34,7 +34,6 @@ namespace PantallaInicio
         }
 
         public static void CerrarPrograma() {
-            //Herramientas.frmActual.Close();
             Herramientas.frmActual.Dispose();
             Herramientas.frmPrincipal.Dispose();
         }
@@ -63,12 +62,6 @@ namespace PantallaInicio
             frmContActual.Show();
             frmContActual.BringToFront();
 
-            //ventanaP = new IngresoPadrinos(fila);
-            //ventanaP.TopLevel = false;
-            //splitContainer1.Panel1.Controls.Add(ventanaP);
-            //ventanaP.Show();
-            //ventanaP.BringToFront();
-
         }
 
         public static Boolean HayCamposNull(Control ctrls) { 
@@ -78,15 +71,12 @@ namespace PantallaInicio
                 if(ctrl is TextBox){
                     if (string.IsNullOrEmpty(ctrl.Text.ToString()) && (!((TextBox)ctrl).ReadOnly))
                     {
-                        //MessageBox.Show("No se pueden dejar campos vacios");
-                        //return true;
                         Herramientas.PintarErrores(ctrl);
                         respuesta = true;
                     }
                 }
             }
 
-            //return false;
             if (respuesta)
             {
                 MessageBox.Show("No se pueden dejar campos vacios");
@@ -106,13 +96,7 @@ namespace PantallaInicio
             }
         }
 
-        //public static void LimpiarErroresCtrl(Control ctrl)
-        //{
-        //    //((TextBox)ctrl).Clear();
-        //}
-
         public static void PintarErrores(Control ctrl) {
-            //errorPro.Clear();
             if(errorPro!=null){
                 errorPro.SetError(ctrl, "No se pueden dejar campos vacios");
             }

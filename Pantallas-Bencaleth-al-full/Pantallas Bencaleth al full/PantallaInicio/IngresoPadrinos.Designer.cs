@@ -383,7 +383,7 @@
             // 
             this.txtbDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbDireccion.Location = new System.Drawing.Point(480, 539);
-            this.txtbDireccion.MaxLength = 30;
+            this.txtbDireccion.MaxLength = 50;
             this.txtbDireccion.Name = "txtbDireccion";
             this.txtbDireccion.Size = new System.Drawing.Size(190, 26);
             this.txtbDireccion.TabIndex = 11;

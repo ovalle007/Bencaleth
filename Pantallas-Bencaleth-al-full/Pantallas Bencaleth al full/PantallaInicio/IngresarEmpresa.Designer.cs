@@ -140,7 +140,7 @@
             this.txt_dire_empresa.BackColor = System.Drawing.Color.White;
             this.txt_dire_empresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_dire_empresa.Location = new System.Drawing.Point(488, 302);
-            this.txt_dire_empresa.MaxLength = 30;
+            this.txt_dire_empresa.MaxLength = 50;
             this.txt_dire_empresa.Name = "txt_dire_empresa";
             this.txt_dire_empresa.Size = new System.Drawing.Size(193, 26);
             this.txt_dire_empresa.TabIndex = 3;
@@ -276,7 +276,7 @@
             this.txt_id_empresa.Enabled = false;
             this.txt_id_empresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_id_empresa.Location = new System.Drawing.Point(233, 131);
-            this.txt_id_empresa.MaxLength = 30;
+            this.txt_id_empresa.MaxLength = 15;
             this.txt_id_empresa.Name = "txt_id_empresa";
             this.txt_id_empresa.ReadOnly = true;
             this.txt_id_empresa.Size = new System.Drawing.Size(193, 26);

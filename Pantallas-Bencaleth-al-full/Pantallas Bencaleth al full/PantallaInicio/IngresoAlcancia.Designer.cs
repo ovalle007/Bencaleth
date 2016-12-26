@@ -67,7 +67,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(231, 201);
-            this.textBox1.MaxLength = 30;
+            this.textBox1.MaxLength = 15;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 26);
             this.textBox1.TabIndex = 0;
@@ -87,7 +87,7 @@
             // 
             this.txtbDir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbDir.Location = new System.Drawing.Point(231, 340);
-            this.txtbDir.MaxLength = 30;
+            this.txtbDir.MaxLength = 50;
             this.txtbDir.Name = "txtbDir";
             this.txtbDir.Size = new System.Drawing.Size(200, 26);
             this.txtbDir.TabIndex = 1;
@@ -239,7 +239,7 @@
             // 
             this.txtbTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbTel.Location = new System.Drawing.Point(487, 201);
-            this.txtbTel.MaxLength = 30;
+            this.txtbTel.MaxLength = 15;
             this.txtbTel.Name = "txtbTel";
             this.txtbTel.Size = new System.Drawing.Size(200, 26);
             this.txtbTel.TabIndex = 118;
